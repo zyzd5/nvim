@@ -1,2 +1,2 @@
 require("core.config")
-require("plugins.lazy")
+require("core.lazy")
