@@ -3,4 +3,4 @@ require("core.lazy")
 require("core.config")
 require("core.keymaps")
 
-vim.cmd [[colorscheme tokyonight-moon]]
+vim.cmd [[colorscheme gruvbox]]
