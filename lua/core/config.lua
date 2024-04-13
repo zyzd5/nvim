@@ -1,34 +1,29 @@
--- number
-vim.opt.relativenumber = true
-vim.opt.number = true
+local option = vim.opt
+local buffer = vim.b
+local global = vim.g
 
--- tab
-vim.opt.tabstop = 4		-- 显示缩进符时的缩进数
-vim.opt.shiftwidth = 4		-- 按下tab插入的缩进数
-vim.opt.expandtab = true        -- 使用空格代替制表符进行缩进
-vim.opt.autoindent = true      	-- 自动缩进
+-- Option --
+option.showmode = false		-- 显示状态, insert等, 会被lualine代替掉, 所以是false
+option.tabstop = 4
+option.shiftwidth = 4
+option.expandtab = true
+option.shiftround = true
+option.autoindent = true
+option.smartindent = true
+option.number = true
+option.relativenumber = true
+option.ignorecase = true
+option.smartcase = true     
+option.hlsearch = false     -- /search 时关闭高亮
+option.cursorline = true    -- 高亮鼠标当前行
+option.termguicolors = true -- 真彩色
+option.undofile = true      -- 在退出后仍然可以undo
+option.wrap = true          -- 自动缩进
+option.splitright = true    -- 默认在右边打开窗口
+option.splitbelow = true    -- 默认在下方打开窗口
 
---防止包裹
-vim.opt.wrap = false
+-- Buffer Setting -- 
+buffer.fileenconding = "utf-8"
 
--- 光标
-vim.opt.cursorline = true
-
--- 启用鼠标
-vim.opt.mouse:append("a")
-
--- 系统剪切板
-vim.opt.clipboard:append("unnamedplus")
-
--- 默认新窗口右和下
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-
--- 搜索
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
--- 外观
-vim.opt.termguicolors = true
-vim.opt.signcolumn = "yes"
-
+-- Global Setting --
+global.mapleader = " "       --主键: 空格
