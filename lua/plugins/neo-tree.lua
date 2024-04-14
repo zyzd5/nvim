@@ -10,6 +10,6 @@ return
     },
     config = function()
         require("neo-tree").setup()
-        vim.keymap.set({"n", "v"}, "<leader>e", [[<cmd>Neotree toggle<CR>]], desc = "open Neotree")
+        vim.keymap.set({"n", "v"}, "<leader>e", [[<cmd>Neotree toggle<CR>]])
     end,
 }
