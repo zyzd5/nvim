@@ -38,7 +38,7 @@ return
   on_highlights = function(highlights, colors) end,
 })
   end,
-  lazy = false,
+  lazy = true,
   priority = 1000,
   opts = {},
   
