@@ -11,8 +11,8 @@ return
       },
       shortcut = {
         { desc = ' Update', group = '@property', action = 'Lazy update', key = 'u' },
-        { desc = '󰹯 Lazy', group = '@property', action = 'Lazy', key = 'L'},
         { desc = '󰹰 Mason', group = '@property', action = 'Mason', key = 'M'},
+        { desc = '󰹯 Lazy', group = '@property', action = 'Lazy', key = 'L'},
         { icon = ' ', icon_hl = '@variable', desc = 'Files', group = 'Label', action = 'Telescope find_files', key = 'f' },
       },
     }
