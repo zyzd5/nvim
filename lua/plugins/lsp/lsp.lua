@@ -4,6 +4,8 @@ return
     dependencies = {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig",
+        "folke/neodev.nvim",
+        { "j-hui/fidget.nvim", opts = {}, }
 
     },
     config = function()
@@ -42,6 +44,8 @@ return
             --                 vim.lsp.buf.format { async = true }
             --             end, "[F]ormat code")
         end
+        require("neodev").setup()
+        require("fidget").setup()
         require('mason').setup()
         require("mason-lspconfig").setup({
             ensure_installed = vim.tbl_keys(servers),
