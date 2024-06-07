@@ -1,5 +1,9 @@
 local keymap = vim.keymap.set
 
+-- 折叠
+keymap("n", "<leader>[", "za", {silent = true})
+keymap("n", "<leader>]", "zo", {silent = true})
+
 -- 缩进
 keymap("v", "<D-[>", "<<", {silent = true})
 keymap("n", "<D-[>", "<<", {silent = true})

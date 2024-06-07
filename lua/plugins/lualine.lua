@@ -9,7 +9,7 @@ return
             options = {
                 theme = {
                     normal = { 
-                        a = { bg = '#333c3e' },
+                        a = { bg = '#5a7913' },
                         b = { bg = 'NONE' },
                         c = { bg = 'NONE' },
                     },
