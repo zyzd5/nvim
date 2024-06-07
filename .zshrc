@@ -2,7 +2,8 @@ export https_proxy=http://127.0.0.1:7890
 export http_proxy=http://127.0.0.1:7890 
 export all_proxy=socks5://127.0.0.1:7890
 
-export EDITOR=vim
+export EDITOR=neovim
+export MANPAGER='nvim +Man!'
 
 alias n='nvim'
 alias 'n.'='n .'
@@ -11,9 +12,7 @@ alias ':q'='exit'
 alias 'q'='exit'
 alias 'cl'='clear'
 alias 'c'='clear'
-alias 'cat'='bat'
-alias 'ga'='git add' 
-alias 'gc'='git commit'
+alias 'sl'='ls'
 
 
 
