@@ -1,5 +1,11 @@
 local keymap = vim.keymap.set
 
+-- 缩进
+keymap("v", "<D-[>", "<<", {silent = true})
+keymap("n", "<D-[>", "<<", {silent = true})
+keymap("v", "<D-]>", ">>", {silent = true})
+keymap("n", "<D-]>", ">>", {silent = true})
+
 -- <leader>Tab 切换缓冲
 keymap("n", "<leader>Tab", "<cmd>bNext<CR>", {silent = true})
 -- <leader>w 关闭当前缓冲
@@ -12,9 +18,15 @@ keymap("v", "K", ":m '<-2<CR>gv=gv", {silent = true})
 -- <leader>vs 右边新增窗口
 keymap("n", "<leader>vs", "<cmd>vs<CR>", {silent = true})
 
--- <C-hjkl> 在窗口间移动
-keymap("n", "<C-h>", "<C-w>h", {silent = true})
-keymap("n", "<C-j>", "<C-w>j", {silent = true})
-keymap("n", "<C-k>", "<C-w>k", {silent = true})
-keymap("n", "<C-l>", "<C-w>l", {silent = true})
+-- 在窗口间移动
+keymap("n", "<leader>h", "<C-w>h", {silent = true})
+keymap("n", "<leader>j", "<C-w>j", {silent = true})
+keymap("n", "<leader>k", "<C-w>k", {silent = true})
+keymap("n", "<leader>l", "<C-w>l", {silent = true})
+
+-- <leader>1 -> jumpHome, <leader>0 -> jumpEnd
+keymap("n", "<leader>1", "^", {silent = true})
+keymap("n", "<leader>0", "$", {silent = true})
+
+
 

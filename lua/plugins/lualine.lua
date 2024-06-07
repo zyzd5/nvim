@@ -8,18 +8,18 @@ return
         require('lualine').setup({
             options = {
                 theme = {
-                    normal = {
-                        a = { bg = 'NONE' },
+                    normal = { -- green
+                        a = { bg = '#336932' },
                         b = { bg = 'NONE' },
                         c = { bg = 'NONE' },
                     },
-                    insert = {
-                        a = { bg = 'NONE' },
+                    insert = { -- deep blue
+                        a = { bg = '#2b575c' },
                         b = { bg = 'NONE' },
                         c = { bg = 'NONE' },
                     },
-                    visual = {
-                        a = { bg = 'NONE' },
+                    visual = { -- purple
+                        a = { bg = '#5d1d6b' },
                         b = { bg = 'NONE' },
                         c = { bg = 'NONE' },
                     },
@@ -28,8 +28,8 @@ return
                         b = { bg = 'NONE' },
                         c = { bg = 'NONE' },
                     },
-                    command = {
-                        a = { bg = 'NONE' },
+                    command = { -- orange
+                        a = { bg = '#ea4125' },
                         b = { bg = 'NONE' },
                         c = { bg = 'NONE' },
                     },
