@@ -9,7 +9,11 @@ return
             options = {
                 theme = {
                     normal = { -- green
+<<<<<<< HEAD
                         a = { bg = '#333c3e' },
+=======
+                        a = { bg = '#336932' },
+>>>>>>> 6753d305078e638e6c247f00da9acf665588eadb
                         b = { bg = 'NONE' },
                         c = { bg = 'NONE' },
                     },
@@ -19,7 +23,11 @@ return
                         c = { bg = 'NONE' },
                     },
                     visual = { -- purple
+<<<<<<< HEAD
                         a = { bg = '#795962' },
+=======
+                        a = { bg = '#5d1d6b' },
+>>>>>>> 6753d305078e638e6c247f00da9acf665588eadb
                         b = { bg = 'NONE' },
                         c = { bg = 'NONE' },
                     },
