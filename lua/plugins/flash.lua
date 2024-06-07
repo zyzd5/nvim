@@ -5,7 +5,7 @@ return
     ---@type Flash.Config
     opts = {
         modes = {
-            char = { enabled = false },
+            char = { enabled = true },
         }
     },
     enabled = true,

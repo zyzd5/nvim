@@ -28,9 +28,9 @@ keymap("n", "<leader>j", "<C-w>j", {silent = true})
 keymap("n", "<leader>k", "<C-w>k", {silent = true})
 keymap("n", "<leader>l", "<C-w>l", {silent = true})
 
--- <leader>1 -> jumpHome, <leader>0 -> jumpEnd
-keymap("n", "<leader>1", "^", {silent = true})
-keymap("n", "<leader>0", "$", {silent = true})
+-- cursorHome and cursorEnd
+keymap("n", "<D-'>", "$", {silent = true})
+keymap("n", "<D-;>", "^", {silent = true})
 
 
 
