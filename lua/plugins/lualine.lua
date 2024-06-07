@@ -8,17 +8,17 @@ return
         require('lualine').setup({
             options = {
                 theme = {
-                    normal = { -- green
+                    normal = { 
                         a = { bg = '#333c3e' },
                         b = { bg = 'NONE' },
                         c = { bg = 'NONE' },
                     },
-                    insert = { -- deep blue
+                    insert = { 
                         a = { bg = '#2b575c' },
                         b = { bg = 'NONE' },
                         c = { bg = 'NONE' },
                     },
-                    visual = { -- purple
+                    visual = { 
                         a = { bg = '#795962' },
                         b = { bg = 'NONE' },
                         c = { bg = 'NONE' },
