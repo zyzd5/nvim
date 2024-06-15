@@ -31,6 +31,9 @@ keymap("n", "<leader>l", "<C-w>l", {silent = true})
 -- cursorHome and cursorEnd
 keymap("n", "<D-'>", "$", {silent = true})
 keymap("n", "<D-;>", "^", {silent = true})
-
-
-
+keymap("n", "<leader>'", "$", {silent = true})
+keymap("n", "<leader>;", "^", {silent = true})
+keymap("v", "<D-'>", "$", {silent = true})
+keymap("v", "<D-;>", "^", {silent = true})
+keymap("v", "<leader>'", "$", {silent = true})
+keymap("v", "<leader>;", "^", {silent = true})

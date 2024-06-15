@@ -31,12 +31,30 @@ option.mouse = "a"
 option.undofile = true
 option.wrap = true
 option.splitright = true
-option.clipboard:append("unnamedplus")
 ---
 buffer.fileenconding = "utf-8"
 ---
 global.mapleader = " "
 ---
 
+-- clipboard
+local is_win = vim.fn.has("win32") == 1
+
+if is_win then
+    vim.g.clipboard = {
+        name = 'WslClipboard',
+        copy = {
+            ['+'] = 'clip.exe',
+            ['*'] = 'clip.exe',
+        },
+        paste = {
+            ['+'] = [[powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))]],
+            ['*'] = [[powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))]],
+        },
+        cache_enabled = 0,
+    }
+else 
+    option.clipboard:append("unnamedplus")
+end
 
 
