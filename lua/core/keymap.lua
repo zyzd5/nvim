@@ -1,17 +1,12 @@
 local keymap = vim.keymap.set
 
+-- swap window
+keymap("n", "<leader>s", ":lua SwapWindows()<CR>", {noremap = true, silent = true})
+
 -- 折叠
 keymap("n", "<leader>[", "za", {silent = true})
 keymap("n", "<leader>]", "zo", {silent = true})
 
--- 缩进
-keymap("v", "<D-[>", "<<", {silent = true})
-keymap("n", "<D-[>", "<<", {silent = true})
-keymap("v", "<D-]>", ">>", {silent = true})
-keymap("n", "<D-]>", ">>", {silent = true})
-
--- <leader>Tab 切换缓冲
-keymap("n", "<leader>Tab", "<cmd>bNext<CR>", {silent = true})
 -- <leader>w 关闭当前缓冲
 keymap("n", "<leader>w", "<cmd>bd<CR>", {silent = true})
 
@@ -37,3 +32,6 @@ keymap("v", "<D-'>", "$", {silent = true})
 keymap("v", "<D-;>", "^", {silent = true})
 keymap("v", "<leader>'", "$", {silent = true})
 keymap("v", "<leader>;", "^", {silent = true})
+
+keymap("n", "<leader>da", "ggVGd", {silent = true})
+keymap("n", "<leader>va", "ggVG", {silent = true})
