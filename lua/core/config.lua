@@ -1,3 +1,5 @@
+
+---
 local option = vim.opt
 local buffer = vim.b
 local global = vim.g

@@ -1,5 +1,8 @@
 local keymap = vim.keymap.set
 
+-- paste on next line
+keymap('n', '<leader>p', 'o<Esc>p', { noremap = true, silent = true })
+
 -- swap window
 keymap("n", "<leader>s", ":lua SwapWindows()<CR>", {noremap = true, silent = true})
 
