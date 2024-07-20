@@ -10,4 +10,5 @@ data
 *.c
 *.java
 lazy-lock.json
-
+.vscode
+*.json
