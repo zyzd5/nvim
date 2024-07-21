@@ -1,6 +1,8 @@
 return {
 
 	"neovim/nvim-lspconfig",
+    cmd = {"Mason", "Neoconf"},
+    event = { "BufReadPost", "BufNewFile"},
 	config = function()
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
