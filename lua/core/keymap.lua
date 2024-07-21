@@ -1,5 +1,11 @@
 local keymap = vim.keymap.set
 
+keymap('i', '<D-Left>', 'b', { noremap = true, silent = true })
+keymap('i', '<D-Right>', 'w', { noremap = true, silent = true })
+
+-- 当前行放置到屏幕第一行
+keymap('n', '<leader>m', 'zt', { noremap = true, silent = true })
+
 -- paste on next line
 keymap('n', '<leader>p', 'o<Esc>p', { noremap = true, silent = true })
 
