@@ -15,4 +15,6 @@ require("lazy").setup({
     {import = "plugins"},
     {import = "plugins.lsp"},
     {import = "plugins.code_snip"},
+    {import = "plugins.dap"},
+
 })
