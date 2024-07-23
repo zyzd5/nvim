@@ -1,5 +1,8 @@
 local keymap = vim.keymap.set
 
+keymap('i', '<C-BS>', '<C-w>', { noremap = true, silent = true })
+keymap('i', '<D-BS>', '<C-w>', { noremap = true, silent = true })
+
 keymap('i', '<D-Left>', 'b', { noremap = true, silent = true })
 keymap('i', '<D-Right>', 'w', { noremap = true, silent = true })
 
