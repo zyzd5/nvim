@@ -15,7 +15,6 @@ return {
                 documentation = cmp.config.window.bordered(),
             },
             mapping = cmp.mapping.preset.insert({
-                ["<C-Space>"] = cmp.mapping.complete(),
                 ["<C-e>"] = cmp.mapping.abort(),
                 ["<Tab>"] = cmp.mapping.select_next_item(),
                 ["<S-Tab>"] = cmp.mapping.select_prev_item(),

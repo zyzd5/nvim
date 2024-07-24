@@ -1,13 +1,11 @@
 local keymap = vim.keymap.set
 
+
+keymap('n', '<leader>o', '<C-]>', { noremap = true, silent = true })
+keymap('n', '<leader>O', '<C-o>', { noremap = true, silent = true })
+
 keymap('i', '<C-BS>', '<C-w>', { noremap = true, silent = true })
 keymap('i', '<D-BS>', '<C-w>', { noremap = true, silent = true })
-
-keymap('i', '<D-Left>', 'b', { noremap = true, silent = true })
-keymap('i', '<D-Right>', 'w', { noremap = true, silent = true })
-
--- 当前行放置到屏幕第一行
-keymap('n', '<leader>m', 'zt', { noremap = true, silent = true })
 
 -- paste on next line
 keymap('n', '<leader>p', 'o<Esc>p', { noremap = true, silent = true })
@@ -36,14 +34,9 @@ keymap("n", "<leader>k", "<C-w>k", {silent = true})
 keymap("n", "<leader>l", "<C-w>l", {silent = true})
 
 -- cursorHome and cursorEnd
-keymap("n", "<D-'>", "$", {silent = true})
-keymap("n", "<D-;>", "^", {silent = true})
 keymap("n", "<leader>'", "$", {silent = true})
 keymap("n", "<leader>;", "^", {silent = true})
-keymap("v", "<D-'>", "$", {silent = true})
-keymap("v", "<D-;>", "^", {silent = true})
 keymap("v", "<leader>'", "$", {silent = true})
 keymap("v", "<leader>;", "^", {silent = true})
 
-keymap("n", "<leader>da", "ggVGd", {silent = true})
 keymap("n", "<leader>va", "ggVG", {silent = true})

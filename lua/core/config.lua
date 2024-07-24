@@ -1,5 +1,3 @@
-
----
 local option = vim.opt
 local buffer = vim.b
 local global = vim.g
@@ -43,6 +41,7 @@ global.mapleader = " "
 local is_win = vim.fn.has("win32") == 1
 
 if is_win then
+    -- still not word good, basicly i dont use wsl nvim, so doesnt a matter
     vim.g.clipboard = {
         name = 'WslClipboard',
         copy = {
