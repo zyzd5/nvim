@@ -42,6 +42,7 @@
 |flash.nvim|select whole thing on {}|S|honestly too much fancy|
 |mini-comment|comment line|\<leader>/|vscode like|
 |none-ls|format with lsp|\<leader>gf|viual and '=' could either|
+|noice.nvim|dismiss message|\<leader>nd|noice dismiss|
 |nvim-telescope|find_files|\<leader>ff|god|
 |nvim-telescope|live_grep|\<leader>fg|Great, there's no need to say much|
 |nvim-telescope|buffers|\<leader>\<space>|good thinking|
