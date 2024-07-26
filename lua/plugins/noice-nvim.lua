@@ -7,7 +7,8 @@ return {
 		"rcarriga/nvim-notify",
 	},
 	config = function()
-        vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", {noremap = true})
+		vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { noremap = true })
+		vim.keymap.set("n", "<leader>nm", "<cmd>messages<CR>", { noremap = true })
 		require("noice").setup({
 			lsp = {
 				override = {
@@ -23,6 +24,9 @@ return {
 				inc_rename = false, -- enables an input dialog for inc-rename.nvim
 				lsp_doc_border = false, -- add a border to hover docs and signature help
 			},
+		})
+		require("notify").setup({
+			background_colour = "#8aa499",
 		})
 	end,
 }

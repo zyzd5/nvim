@@ -12,6 +12,7 @@
 |-|-|-|-|
 |insert|delete word|\<C-BS>/\<D-BS>|vscode like|
 |normal|close buffer|\<leader>w|vscode like|
+|normal|goto bracket|<C-\\>/<D-\\>|vscode like|
 |normal|jump to tag file|\<leader>o|better than default `Ctrl+]`|
 |normal|back to tag source file|\<leader>O|better than default `Ctrl+o`|
 |normal|paste directly|\<leader>p|sometime better than p|
@@ -43,6 +44,7 @@
 |mini-comment|comment line|\<leader>/|vscode like|
 |none-ls|format with lsp|\<leader>gf|viual and '=' could either|
 |noice.nvim|dismiss message|\<leader>nd|noice dismiss|
+|noice.nvim|show messages|\<leader>nm|noice messages|
 |nvim-telescope|find_files|\<leader>ff|god|
 |nvim-telescope|live_grep|\<leader>fg|Great, there's no need to say much|
 |nvim-telescope|buffers|\<leader>\<space>|good thinking|

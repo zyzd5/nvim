@@ -1,5 +1,7 @@
 local keymap = vim.keymap.set
 
+keymap('n', '<C-\\>', '%', { noremap = true, silent = true, desc = "jump couple"})
+keymap('n', '<D-\\>', '%', { noremap = true, silent = true, desc = "jump couple"})
 
 keymap('n', '<leader>o', '<C-]>', { noremap = true, silent = true })
 keymap('n', '<leader>O', '<C-o>', { noremap = true, silent = true })
