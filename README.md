@@ -50,3 +50,4 @@
 |nvim-telescope|buffers|\<leader>\<space>|good thinking|
 |nvim-telescope|oldfiles|\<leader>fo|always use|
 |nvim-tree|TreeToggle|\<leader>e|e means explorer|
+|markdown-preview|preview-toggle|\<leader>m|m means markdown|

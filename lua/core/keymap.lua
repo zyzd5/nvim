@@ -1,5 +1,10 @@
 local keymap = vim.keymap.set
 
+keymap('i', '，', ',')
+keymap('n', '，', ',')
+keymap('i', '：', ':')
+keymap('n', '：', ':')
+
 keymap('n', '<C-\\>', '%', { noremap = true, silent = true, desc = "jump couple"})
 keymap('n', '<D-\\>', '%', { noremap = true, silent = true, desc = "jump couple"})
 
