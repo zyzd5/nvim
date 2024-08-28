@@ -1,4 +1,4 @@
-* update time: 2024/7/26 00:42
+* update time: 2024/8/28 12:28
 # shortcuts
 * \<CR> = `Enter`
 * \<BS> = `Backspace`
@@ -17,12 +17,11 @@
 |normal|back to tag source file|\<leader>O|better than default `Ctrl+o`|
 |normal|paste directly|\<leader>p|sometime better than p|
 |normal|select all line|\<leader>va|useful|
-|normal|swap with next window|\<leader>s|based on functions.lua|
 |normal|fold code toggle|\<leader>[|based on treesitter.nvim, vscode like|
 |normal|open fold|\<leader>]|based on treesitter.nvim, vscode like|
 |normal|new window in right|\<leader>vs|vertical split|
 |normal|move from window up/down/left/right|\<leader>h/j/k/l|very useful|
-|n/v|move cursor Home/End|\<leader>;/'|better than original $/^|
+|n/v|move cursor Home/End|;/'|better than original $/^|
 |V-line|move line up/down|J/K|copy someone's config, a little bug|
 ## plugin shortcuts
 ### code snip

@@ -4,13 +4,15 @@ keymap('i', '，', ',')
 keymap('n', '，', ',')
 keymap('i', '：', ':')
 keymap('n', '：', ':')
-keymap('i', '（', '(')
+keymap('i', '（', '()')
 keymap('i', '）', ')')
 keymap('i', '·', '``<Left>')
 keymap('i', '。', '.')
 keymap('i', '《', '<')
 keymap('i', '》', '>')
 keymap('i', '¥', '$')
+keymap('i', '｜', '|')
+keymap('i', '、', "\\")
 
 keymap('n', '<D-Left>', '^', { noremap = true, silent = true, desc = "cursorHome"})
 keymap('n', '<D-Right>', '$', { noremap = true, silent = true, desc = "cursorEnd"})
@@ -24,14 +26,8 @@ keymap('n', '<leader>O', '<C-o>', { noremap = true, silent = true })
 keymap('i', '<C-BS>', '<C-w>', { noremap = true, silent = true })
 keymap('i', '<D-BS>', '<C-w>', { noremap = true, silent = true })
 
--- paste on next line
-keymap('n', '<leader>p', 'o<Esc>p', { noremap = true, silent = true })
-
--- swap window
-keymap("n", "<leader>s", ":lua SwapWindows()<CR>", {noremap = true, silent = true})
-
 -- 折叠
-keymap("n", "<leader>[", "za", {silent = true})
+keymap("n", "<leader>[", "zc", {silent = true})
 keymap("n", "<leader>]", "zo", {silent = true})
 
 -- <leader>w 关闭当前缓冲
@@ -51,9 +47,9 @@ keymap("n", "<leader>k", "<C-w>k", {silent = true})
 keymap("n", "<leader>l", "<C-w>l", {silent = true})
 
 -- cursorHome and cursorEnd
-keymap("n", "<leader>'", "$", {silent = true})
-keymap("n", "<leader>;", "^", {silent = true})
-keymap("v", "<leader>'", "$", {silent = true})
-keymap("v", "<leader>;", "^", {silent = true})
+keymap("n", "'", "$", {silent = true, noremap = true})
+keymap("n", ";", "^", {silent = true, noremap = true})
+keymap("v", "'", "$", {silent = true, noremap = true})
+keymap("v", ";", "^", {silent = true, noremap = true})
 
 keymap("n", "<leader>va", "ggVG", {silent = true})
