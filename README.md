@@ -1,4 +1,4 @@
-* update time: 2024/8/28 12:28
+* update time: 2024/8/31 12:28
 # shortcuts
 * \<CR> = `Enter`
 * \<BS> = `Backspace`
@@ -12,7 +12,7 @@
 |-|-|-|-|
 |insert|delete word|\<C-BS>/\<D-BS>|vscode like|
 |normal|close buffer|\<leader>w|vscode like|
-|normal|goto bracket|<C-\\>/<D-\\>|vscode like|
+|normal|goto bracket|\<\\>|vscode like|
 |normal|jump to tag file|\<leader>o|better than default `Ctrl+]`|
 |normal|back to tag source file|\<leader>O|better than default `Ctrl+o`|
 |normal|paste directly|\<leader>p|sometime better than p|
