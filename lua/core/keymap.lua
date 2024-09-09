@@ -13,6 +13,10 @@ keymap('i', '》', '>')
 keymap('i', '¥', '$')
 keymap('i', '｜', '|')
 keymap('i', '、', "\\")
+keymap('i', '「', "{}")
+keymap('i', '」', "}")
+keymap('i', '？', "?")
+
 
 -- scrollLineUp & scrollLineDown
 keymap('n', '<D-Down>', '<C-e>', { noremap = true, silent = true })
