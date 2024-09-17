@@ -30,9 +30,11 @@ keymap('n', '<D-[>', '<<', { noremap = true, silent = true })
 keymap('v', 'D-]', '>>', { noremap = true, silent = true })
 keymap('v', 'D-[', '<<', { noremap = true, silent = true })
 
+-- cursorHome and cursorEnd
 keymap('n', '<D-Left>', '^', { noremap = true, silent = true, desc = "cursorHome"})
 keymap('n', '<D-Right>', '$', { noremap = true, silent = true, desc = "cursorEnd"})
 
+-- Go to bracket
 keymap('n', '\\', '%', { noremap = true, silent = true, desc = "Go to bracket"})
 keymap('v', '\\', '%', { noremap = true, silent = true, desc = "Go to bracket"})
 

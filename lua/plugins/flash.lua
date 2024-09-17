@@ -20,6 +20,9 @@ return {
 						warp = false,
 						multi_window = false,
 					},
+                    mode = function(str)
+                        return "\\<" .. str
+                    end,
 				})
 			end,
 			desc = "Flash",

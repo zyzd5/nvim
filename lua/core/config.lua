@@ -2,8 +2,10 @@ local option = vim.opt
 local buffer = vim.b
 local global = vim.g
 
+option.whichwrap = "b,h,l,<,>"
 option.showmode = false
 option.backspace = {"indent", "eol", "start"}
+option.scrolloff = 4
 option.tabstop = 4
 option.shiftwidth = 4
 option.expandtab = true
