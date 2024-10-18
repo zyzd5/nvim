@@ -1,6 +1,6 @@
 return {
 	"zyzd5/Switcher",
-    enabled = true,
+    enabled = false,
     event = "VeryLazy",
 	config = function()
 		require("Switcher").setup()

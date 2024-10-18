@@ -2,7 +2,7 @@ return
     {
         "goolord/alpha-nvim",
         dependencies = { "nvim-tree/nvim-web-devicons", },
-        enabled = false,
+        enabled = true,
 
         config = function()
             local alpha = require("alpha")
