@@ -22,7 +22,8 @@ keymap("i", "？", "?")
 -- ignored keybind
 keymap("n", "J", "")
 keymap("n", "q:", "")
-keymap("n", "C-e", "")
+keymap("n", "qq", "")
+keymap("n", "<C-e>", "")
 
 -- scrollLineUp & scrollLineDown
 keymap("n", "<D-Down>", "<C-e>", { noremap = true, silent = true })
