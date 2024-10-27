@@ -1,23 +1,7 @@
 local keymap = vim.keymap.set
 
-keymap("i", "，", ",")
-keymap("n", "，", ",")
-keymap("i", "：", ":")
-keymap("n", "：", ":")
-keymap("i", "（", "()<Esc>i")
-keymap("i", "）", ")")
-keymap("i", "·", "``<Left>")
-keymap("i", "。", ".")
-keymap("i", "《", "<")
-keymap("i", "》", ">")
-keymap("i", "【", "[]")
-keymap("i", "】", "]")
-keymap("i", "¥", "$")
-keymap("i", "｜", "|")
-keymap("i", "、", "\\")
-keymap("i", "「", "{}")
-keymap("i", "」", "}")
-keymap("i", "？", "?")
+-- select word
+keymap("n", "<D-d>", "viw", { noremap = true, silent = true })
 
 -- ignored keybind
 keymap("n", "J", "")
@@ -38,43 +22,38 @@ keymap("v", "D-]", ">>", { noremap = true, silent = true })
 keymap("v", "D-[", "<<", { noremap = true, silent = true })
 
 -- cursorHome and cursorEnd
-keymap("n", "<D-Left>", "^", { noremap = true, silent = true, desc = "cursorHome" })
-keymap("n", "<D-Right>", "$", { noremap = true, silent = true, desc = "cursorEnd" })
-
 keymap("n", "'", "$", { silent = true, noremap = true })
 keymap("n", ";", "^", { silent = true, noremap = true })
 keymap("v", "'", "$", { silent = true, noremap = true })
 keymap("v", ";", "^", { silent = true, noremap = true })
 
+-- delete cursorHome and cursorEnd
 keymap("n", "d'", "d$", { silent = true, noremap = true })
 keymap("n", "d;", "d^", { silent = true, noremap = true })
-
--- Go to bracket
-keymap("n", "\\", "%", { noremap = true, silent = true, desc = "Go to bracket" })
-keymap("v", "\\", "%", { noremap = true, silent = true, desc = "Go to bracket" })
 
 -- jump and back
 keymap("n", "<leader>o", "<C-]>", { noremap = true, silent = true })
 keymap("n", "<leader>O", "<C-o>", { noremap = true, silent = true })
 
+-- delete word on insert mode
 keymap("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
 keymap("i", "<D-BS>", "<C-w>", { noremap = true, silent = true })
 
--- 折叠
+-- fold toggle
 keymap("n", "<leader>[", "zc", { silent = true })
 keymap("n", "<leader>]", "zo", { silent = true })
 
--- <leader>w 关闭当前缓冲
+-- <leader>w close current buffer
 keymap("n", "<leader>w", "<cmd>bd<CR>", { silent = true })
 
--- V模式下JK移动整行
+-- move line Up Down
 keymap("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
 keymap("v", "K", ":m '<-2<CR>gv=gv", { silent = true })
 
--- <leader>vs 
+-- horizontal split
 keymap("n", "<leader>vs", "<cmd>vs<CR>", { silent = true })
 
--- move in windows
+-- jump over windows
 keymap("n", "<leader>h", "<C-w>h", { silent = true })
 keymap("n", "<leader>j", "<C-w>j", { silent = true })
 keymap("n", "<leader>k", "<C-w>k", { silent = true })
@@ -82,3 +61,23 @@ keymap("n", "<leader>l", "<C-w>l", { silent = true })
 
 -- select all
 keymap("n", "<leader>va", "ggVG", { silent = true })
+
+-- chinese input modify
+keymap("i", "，", ",")
+keymap("n", "，", ",")
+keymap("i", "：", ":")
+keymap("n", "：", ":")
+keymap("i", "（", "()<Esc>i")
+keymap("i", "）", ")")
+keymap("i", "·", "``<Left>")
+keymap("i", "。", ".")
+keymap("i", "《", "<")
+keymap("i", "》", ">")
+keymap("i", "【", "[]")
+keymap("i", "】", "]")
+keymap("i", "¥", "$")
+keymap("i", "｜", "|")
+keymap("i", "、", "\\")
+keymap("i", "「", "{}")
+keymap("i", "」", "}")
+keymap("i", "？", "?")
