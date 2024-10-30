@@ -1,7 +1,7 @@
 vim.cmd("set background=dark")
 -- for 'light', 'dark'
 
-vim.cmd("let g:gruvbox_material_foreground = 'original'")
+vim.cmd("let g:gruvbox_material_foreground = 'mix'")
 -- for 'material', 'mix', 'original'
 
 vim.cmd("let g:gruvbox_material_background = 'medium'")
@@ -17,6 +17,8 @@ vim.cmd("let g:gruvbox_material_ui_contrast = 'low'")
 -- vim.cmd("let g:gruvbox_material_colors_override = ''")
 -- check :h gruvbox_material_colors_override for more information
 
+vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
+vim.cmd("let g:gruvbox_material_diagnostic_virtual_text = 'colored'")
 vim.cmd("let g:gruvbox_material_better_performance = 1")
 
 vim.cmd.colorscheme("gruvbox-material")
