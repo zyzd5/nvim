@@ -39,4 +39,3 @@ buffer.fileenconding = "utf-8"
 ---
 global.mapleader = " "
 ---
-

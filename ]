@@ -1,0 +1,16 @@
+vim.cmd("let g:gruvbox_material_background = 'medium'")
+-- for 'hard', 'medium', 'soft'
+
+vim.cmd("let g:gruvbox_material_foreground = 'mix'")
+-- for 'material', 'mix', 'original'
+
+
+vim.cmd("let g:gruvbox_material_transparent_background = 2")
+
+vim.cmd("set background=dark")
+-- for 'light', 'dark'
+
+vim.cmd("let g:gruvbox_material_better_performance = 1")
+
+vim.cmd.colorscheme("gruvbox-material")
+

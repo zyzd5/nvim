@@ -4,7 +4,6 @@ local keymap = vim.keymap.set
 keymap("n", "<D-d>", "viw", { noremap = true, silent = true })
 
 -- ignored keybind
-keymap("n", "J", "")
 keymap("n", "q:", "")
 keymap("n", "qq", "")
 keymap("n", "<C-e>", "")

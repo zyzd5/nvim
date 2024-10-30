@@ -41,7 +41,8 @@ return {
 				capabilities = capabilities,
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true })
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true })
+			vim.keymap.set("n", "J", vim.lsp.buf.definition, { noremap = true })
+			vim.keymap.set("n", "<F12>", vim.lsp.buf.definition, { noremap = true })
 		end,
 	},
 }
