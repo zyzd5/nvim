@@ -1,10 +1,10 @@
 local keymap = vim.keymap.set
-
 -- select word
-keymap("n", "<D-d>", "viw", { noremap = true, silent = true })
+-- keymap("n", "<D-d>", "viw", { noremap = true, silent = true })
 
 -- ignored keybind
 keymap("n", "q:", "")
+keymap("n", 'q"', "")
 keymap("n", "qq", "")
 keymap("n", "<C-e>", "")
 
@@ -35,8 +35,8 @@ keymap("n", "<leader>o", "<C-]>", { noremap = true, silent = true })
 keymap("n", "<leader>O", "<C-o>", { noremap = true, silent = true })
 
 -- delete word on insert mode
-keymap("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
-keymap("i", "<D-BS>", "<C-w>", { noremap = true, silent = true })
+-- keymap("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
+-- keymap("i", "<D-BS>", "<C-w>", { noremap = true, silent = true })
 
 -- fold toggle
 keymap("n", "<leader>[", "zc", { silent = true })

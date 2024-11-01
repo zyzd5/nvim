@@ -1,7 +1,7 @@
 vim.cmd("set background=dark")
 -- for 'light', 'dark'
 
-vim.cmd("let g:gruvbox_material_foreground = 'mix'")
+vim.cmd("let g:gruvbox_material_foreground = 'original'")
 -- for 'material', 'mix', 'original'
 
 vim.cmd("let g:gruvbox_material_background = 'medium'")
@@ -22,7 +22,6 @@ vim.cmd("let g:gruvbox_material_diagnostic_virtual_text = 'colored'")
 vim.cmd("let g:gruvbox_material_better_performance = 1")
 
 vim.cmd.colorscheme("gruvbox-material")
-
 
 if vim.g.neovide then
 	vim.o.guifont = "UbuntuMono Nerd Font:h20:w1.1"
