@@ -1,11 +1,11 @@
 return {
-	{
+	{ -- mason.nvim
 		"williamboman/mason.nvim",
 		config = function()
             require("mason").setup()
 		end,
 	},
-	{
+	{ -- mason-lspconfig.nvim
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
@@ -13,7 +13,7 @@ return {
 			})
 		end,
 	},
-	{
+	{ -- nvim-lspconfig
 		"neovim/nvim-lspconfig",
 		cmd = { "Mason", "Neoconf" },
 		event = { "BufReadPost", "BufNewFile" },
@@ -42,6 +42,8 @@ return {
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true })
 			vim.keymap.set("n", "J", vim.lsp.buf.definition, { noremap = true })
+			vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { noremap = true })
+			vim.keymap.set("n", "R", vim.lsp.buf.rename, { noremap = true })
 			vim.keymap.set("n", "<F12>", vim.lsp.buf.definition, { noremap = true })
 		end,
 	},
