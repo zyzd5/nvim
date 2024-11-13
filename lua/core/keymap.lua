@@ -34,9 +34,8 @@ keymap("n", "d;", "d^", { silent = true, noremap = true })
 keymap("n", "<leader>o", "<C-]>", { noremap = true, silent = true })
 keymap("n", "<leader>O", "<C-o>", { noremap = true, silent = true })
 
--- delete word on insert mode
--- keymap("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
--- keymap("i", "<D-BS>", "<C-w>", { noremap = true, silent = true })
+-- delete word 
+keymap("i", "<D-BS>", "<C-w>", { noremap = true, silent = true })
 
 -- fold toggle
 keymap("n", "<leader>[", "zc", { silent = true })

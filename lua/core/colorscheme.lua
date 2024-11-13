@@ -1,10 +1,11 @@
-vim.cmd("set background=dark")
+
+vim.cmd("set background=light")
 -- for 'light', 'dark'
 
 vim.cmd("let g:gruvbox_material_foreground = 'original'")
 -- for 'material', 'mix', 'original'
 
-vim.cmd("let g:gruvbox_material_background = 'medium'")
+vim.cmd("let g:gruvbox_material_background = 'hard'")
 -- for 'hard', 'medium', 'soft'
 
 vim.cmd("let g:gruvbox_material_transparent_background = 2")
@@ -23,12 +24,12 @@ vim.cmd("let g:gruvbox_material_better_performance = 1")
 
 vim.cmd.colorscheme("gruvbox-material")
 
-if vim.g.neovide then
-	vim.o.guifont = "UbuntuMono Nerd Font:h20:w1.1"
-	vim.o.linespace = 3
-	vim.g.neovide_scale_factor = 1.0
-	vim.g.neovide_transparency = 0.70
-	vim.g.neovide_show_border = true
-	vim.g.neovide_fullscreen = false
-	vim.g.neovide_no_window_frame = true
-end
+-- if vim.g.neovide then
+-- 	vim.o.guifont = "UbuntuMono Nerd Font:h20:w1.1"
+-- 	vim.o.linespace = 3
+-- 	vim.g.neovide_scale_factor = 1.0
+-- 	vim.g.neovide_transparency = 1
+-- 	vim.g.neovide_show_border = true
+-- 	vim.g.neovide_fullscreen = false
+-- 	vim.g.neovide_no_window_frame = true
+-- end

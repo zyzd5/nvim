@@ -12,3 +12,4 @@ data
 lazy-lock.json
 .vscode
 *.json
+a.out

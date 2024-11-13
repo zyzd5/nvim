@@ -6,8 +6,12 @@ return
         require("mini.comment").setup({
             mappings = {
                 comment_line = '<leader>/',
-                comment_visual = '<leader>/'
+                comment_visual = '<leader>/',
+                textobject = '<leader>/'
             },
+            options = {
+                    ignore_black_line = true,
+                }
         })
     end
 
