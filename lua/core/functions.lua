@@ -1,4 +1,6 @@
--- CompileAndRun
+vim.api.nvim_create_user_command("Code", function()
+    vim.cmd("!code %")
+end, {})
 vim.api.nvim_create_user_command("CompileAndRun", function()
 	vim.cmd("w")
 	vim.cmd("split")
@@ -6,8 +8,6 @@ vim.api.nvim_create_user_command("CompileAndRun", function()
 	vim.cmd("resize 8")
 	vim.cmd("term g++ -std=c++17 % && ./a.out")
 end, {})
-
--- colorscheme
 vim.api.nvim_create_user_command("Light", function()
     vim.cmd("set background=light")
     vim.cmd("colo gruvbox")
@@ -18,7 +18,6 @@ vim.api.nvim_create_user_command("Dark", function()
     vim.cmd("colo gruvbox-material")
     vim.cmd("let g:gruvbox_material_transparent_background = 2")
 end, {})
-
 vim.api.nvim_create_user_command("Opacity", function(opts)
 	local config_file = "/Users/zyzds/.config/alacritty/alacritty.toml"
     local alacritty_config = io.open(config_file, "r")
@@ -43,7 +42,6 @@ vim.api.nvim_create_user_command("Opacity", function(opts)
     file:write(content)
     file:close()
 end, {nargs = 1})
-
 vim.api.nvim_create_user_command("Size", function(opts)
 	local config_file = "/Users/zyzds/.config/alacritty/alacritty.toml"
 
@@ -65,9 +63,6 @@ vim.api.nvim_create_user_command("Size", function(opts)
     file:write(content)
     file:close()
 end, {nargs = 1})
-
-
-
 -- keybinding
 vim.keymap.set("n", "<F6>", ":CompileAndRun<CR>", {})
 vim.keymap.set("n", "r", ":CompileAndRun<CR>", {})
