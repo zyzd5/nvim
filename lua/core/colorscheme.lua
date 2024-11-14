@@ -1,5 +1,5 @@
 
-vim.cmd("set background=light")
+vim.cmd("set background=dark")
 -- for 'light', 'dark'
 
 vim.cmd("let g:gruvbox_material_foreground = 'original'")
