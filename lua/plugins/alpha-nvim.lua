@@ -19,13 +19,14 @@ return {
 			-- [[  / /  / / /_/ / /_/  __/ /  / / /_/ / /      ]],
 			-- [[ /_/  /_/\__,_/\__/\___/_/  /_/\__,_/_/       ]],
             [[ TODO:                      ]],
+            [[ *                          ]],
+            [[ * draw the flow in markdown]],
             [[ * c++ performance analysis ]],
             [[ * ncurse.h                 ]],
             [[ * render-markdown.nvim     ]],
             [[ * random num generate      ]],
             [[ * static_assert()          ]],
             [[ * assert()                 ]],
-            [[ * 快速排序, 堆排序         ]],
 		}
 
 		alpha.setup(dashboard.opts)
