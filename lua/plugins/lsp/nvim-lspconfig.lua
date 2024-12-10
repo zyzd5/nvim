@@ -24,6 +24,9 @@ return {
 		lspconfig.cmake.setup({
 			capabilities = capabilities,
 		})
+		lspconfig.rust_analyzer.setup({
+			capabilities = capabilities,
+		})
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true })
 		vim.keymap.set("n", "J", vim.lsp.buf.definition, { noremap = true })
 		vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { noremap = true })

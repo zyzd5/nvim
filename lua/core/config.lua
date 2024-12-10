@@ -34,6 +34,7 @@ option.mouse = "a"
 option.undofile = true
 option.wrap = true
 option.splitright = true
+option.virtualedit = "all"
 ---
 buffer.fileenconding = "utf-8"
 ---
