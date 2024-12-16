@@ -19,10 +19,9 @@ return {
 			{
 				[[ TODO:                      ]],
 				[[ *                          ]],
+				[[ * c++ regex                ]],
 				[[ * tmux add a real bar      ]],
 				[[ * c++ performance analysis ]],
-				[[ * ncurse.h                 ]],
-				[[ * render-markdown.nvim     ]],
 				[[ * static_assert()          ]],
 				[[ * assert()                 ]],
 			},

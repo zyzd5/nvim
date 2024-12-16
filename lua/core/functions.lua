@@ -10,14 +10,12 @@ vim.api.nvim_create_user_command("CompileAndRun", function()
 		vim.cmd("wincmd j")
 		vim.cmd("resize 6")
 		vim.cmd("term gcc % && ./a.out")
-	end
-
-	if filetype == "cpp" then
+	elseif filetype == "cpp" then
 		vim.cmd("w")
 		vim.cmd("split")
 		vim.cmd("wincmd j")
 		vim.cmd("resize 6")
-		vim.cmd("term g++ % && ./a.out")
+		vim.cmd("term g++ --std=c++17 % && ./a.out")
 	elseif filetype == "lua" then
 		vim.cmd("w")
 		vim.cmd("split")
@@ -41,8 +39,8 @@ vim.api.nvim_create_user_command("Light", function()
 end, {})
 vim.api.nvim_create_user_command("Dark", function()
 	vim.cmd("set background=dark")
-	vim.cmd("colo gruvbox-material")
 	vim.cmd("let g:gruvbox_material_transparent_background = 2")
+	vim.cmd("colo gruvbox-material")
 end, {})
 vim.api.nvim_create_user_command("Opacity", function(opts)
 	local config_file = "/Users/zyzds/.config/alacritty/alacritty.toml"
@@ -68,9 +66,8 @@ vim.api.nvim_create_user_command("Opacity", function(opts)
 	file:write(content)
 	file:close()
 end, { nargs = 1 })
-vim.api.nvim_create_user_command("Size", function(opts)
+vim.api.nvim_create_user_command("Transparent", function()
 	local config_file = "/Users/zyzds/.config/alacritty/alacritty.toml"
-
 	local alacritty_config = io.open(config_file, "r")
 	if not alacritty_config then
 		print("failed to open alacritty_config")
@@ -79,7 +76,7 @@ vim.api.nvim_create_user_command("Size", function(opts)
 	local content = alacritty_config:read("*a")
 	alacritty_config:close()
 
-	content = content:gsub("size = %d+", "size = " .. opts.args)
+	content = content:gsub("opacity = %d+.%d+", "opacity = " .. "0.8")
 
 	local file = io.open(config_file, "w")
 	if not file then
@@ -88,7 +85,7 @@ vim.api.nvim_create_user_command("Size", function(opts)
 	end
 	file:write(content)
 	file:close()
-end, { nargs = 1 })
+end, {})
 -- keybinding
 vim.keymap.set("n", "<F6>", ":CompileAndRun<CR>", {})
 vim.keymap.set("n", "r", ":CompileAndRun<CR>", {})
