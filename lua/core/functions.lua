@@ -43,49 +43,38 @@ vim.api.nvim_create_user_command("Dark", function()
 	vim.cmd("colo gruvbox-material")
 end, {})
 vim.api.nvim_create_user_command("Opacity", function(opts)
-	local config_file = "/Users/zyzds/.config/alacritty/alacritty.toml"
-	local alacritty_config = io.open(config_file, "r")
-	if not alacritty_config then
-		print("failed to open alacritty_config")
-		return
-	end
-	local content = alacritty_config:read("*a")
-	alacritty_config:close()
-
-	if tostring(opts.args) == "1" then
-		content = content:gsub("opacity = %d+.%d+", "opacity = " .. "1.0")
-	else
-		content = content:gsub("opacity = %d+.%d+", "opacity = " .. opts.args)
-	end
-
-	local file = io.open(config_file, "w")
+	local file = io.open("/Users/zyzds/.config/alacritty/alacritty.toml", "r+")
 	if not file then
-		print("failed to write config_file")
-		return
+		print("open file failed")
+        return
 	end
-	file:write(content)
-	file:close()
-end, { nargs = 1 })
-vim.api.nvim_create_user_command("Transparent", function()
-	local config_file = "/Users/zyzds/.config/alacritty/alacritty.toml"
-	local alacritty_config = io.open(config_file, "r")
-	if not alacritty_config then
-		print("failed to open alacritty_config")
-		return
-	end
-	local content = alacritty_config:read("*a")
-	alacritty_config:close()
 
-	content = content:gsub("opacity = %d+.%d+", "opacity = " .. "0.8")
-
-	local file = io.open(config_file, "w")
-	if not file then
-		print("failed to write config_file")
-		return
+	local opacity = tostring(opts.args)
+	if opts.args == "1" then
+		opacity = "1.0"
 	end
-	file:write(content)
+
+	local offset = 0
+	while true do
+		local line = file:read("*l")
+		if not line then
+			break
+		end
+		local match_start, match_end = line:find("opacity = %d+%.%d+")
+		if match_start then
+			file:seek("set", offset + match_start - 1)
+			file:write("opacity = " .. opacity)
+			break
+		end
+		offset = offset + #line + 1
+	end
 	file:close()
-end, {})
+end, {
+	nargs = 1,
+	complete = function()
+		return { "0.8", "1.0" }
+	end,
+})
 -- keybinding
 vim.keymap.set("n", "<F6>", ":CompileAndRun<CR>", {})
 vim.keymap.set("n", "r", ":CompileAndRun<CR>", {})
