@@ -8,18 +8,6 @@ keymap("n", 'q"', "")
 keymap("n", "qq", "")
 keymap("n", "<C-e>", "")
 
--- scrollLineUp & scrollLineDown
-keymap("n", "<D-Down>", "<C-e>", { noremap = true, silent = true })
-keymap("n", "<D-Up>", "<C-y>", { noremap = true, silent = true })
-keymap("i", "<D-Down>", "<Esc><C-e>a", { noremap = true, silent = true })
-keymap("i", "<D-Up>", "<Esc><C-y>a", { noremap = true, silent = true })
-
--- indent
-keymap("n", "<D-]>", ">>", { noremap = true, silent = true })
-keymap("n", "<D-[>", "<<", { noremap = true, silent = true })
-keymap("v", "D-]", ">>", { noremap = true, silent = true })
-keymap("v", "D-[", "<<", { noremap = true, silent = true })
-
 -- cursorHome and cursorEnd
 keymap("n", "'", "$", { silent = true, noremap = true })
 keymap("n", ";", "^", { silent = true, noremap = true })
