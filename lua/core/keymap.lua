@@ -1,6 +1,7 @@
 local keymap = vim.keymap.set
--- select word
--- keymap("n", "<D-d>", "viw", { noremap = true, silent = true })
+
+-- Pagedown
+keymap("n", "<D-d>", "<C-d>", { noremap = true, silent = true })
 
 -- ignored keybind
 keymap("n", "q:", "")
