@@ -15,7 +15,7 @@ return {
 			},
 			{
 				[[ TODO:                               ]],
-                [[ * customize alpha.nvim              ]],
+				[[ * customize alpha.nvim              ]],
 				[[ * 三角函数?                         ]],
 				[[ * why derivative of sin(x) = cos(x)?]],
 				[[ * c++ regex                         ]],
@@ -33,17 +33,8 @@ return {
 
 		local random_index = math.random(#table)
 		dashboard.section.header.val = table[random_index]
+		dashboard.section.buttons.val = {}
 
 		alpha.setup(dashboard.opts)
 	end,
 }
--- [[    ______                 __                 ]],
--- [[   / ____/______  ___   __/ /_  ____  _  __   ]],
--- [[  / / __/ ___/ / / / | / / __ \/ __ \| |/_/   ]],
--- [[ / /_/ / /  / /_/ /| |/ / /_/ / /_/ />  <     ]],
--- [[ \____/_/   \__,_/ |___/_.___/\____//_/|_|    ]],
--- [[     __  ___      __            _       __    ]],
--- [[    /  |/  /___ _/ /____  _____(_)___ _/ /    ]],
--- [[   / /|_/ / __ `/ __/ _ \/ ___/ / __ `/ /     ]],
--- [[  / /  / / /_/ / /_/  __/ /  / / /_/ / /      ]],
--- [[ /_/  /_/\__,_/\__/\___/_/  /_/\__,_/_/       ]],
