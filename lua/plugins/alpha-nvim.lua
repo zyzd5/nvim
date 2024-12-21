@@ -9,25 +9,29 @@ return {
 
 		local table = {
 			{
-				[[ colon means ":" ]],
-				[[ comma means "," ]],
 				[[ dash means "-" ]],
 				[[ exclamation means "!" ]],
 				[[ hash means "#" ]],
-				[[ parenthese means "()" ]],
 			},
 			{
-				[[ TODO:                      ]],
-				[[ *                          ]],
-				[[ * c++ regex                ]],
-				[[ * tmux add a real bar      ]],
-				[[ * c++ performance analysis ]],
-				[[ * static_assert()          ]],
-				[[ * assert()                 ]],
+				[[ TODO:                               ]],
+                [[ * customize alpha.nvim              ]],
+				[[ * 三角函数?                         ]],
+				[[ * why derivative of sin(x) = cos(x)?]],
+				[[ * c++ regex                         ]],
+				[[ * c++ performance analysis          ]],
+			},
+			{
+				[[ * symmetry: 对称 ]],
+				[[ *    math has a tendency to reward you when you respect its symmetry ]],
+				[[ * trigonometry: 三角学 ]],
+				[[ *    One of the most important branches of mathematics is trigonometry ]],
+				[[ * statistics: 统计学 ]],
+				[[ * sail: 航行, sailor: 水手 ]],
 			},
 		}
 
-        local random_index = math.random(#table)
+		local random_index = math.random(#table)
 		dashboard.section.header.val = table[random_index]
 
 		alpha.setup(dashboard.opts)
