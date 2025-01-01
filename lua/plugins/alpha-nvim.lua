@@ -9,25 +9,31 @@ return {
 
 		local table = {
 			{
-				[[ dash means "-" ]],
-				[[ exclamation means "!" ]],
-				[[ hash means "#" ]],
-			},
-			{
 				[[ TODO:                               ]],
-				[[ * customize alpha.nvim              ]],
-				[[ * 三角函数?                         ]],
-				[[ * why derivative of sin(x) = cos(x)?]],
+				[[ * 语言病理学, 心理语言潜台词        ]],
+				[[ * make pronounce good               ]],
+				[[ * calculus 1800                     ]],
+				[[ * ncurses tetris                    ]],
+				[[ * make a video for :s/bar/foo/g     ]],
+				[[ * 快速幂                            ]],
+				[[ * debug with lldb                   ]],
+				[[ * 高精度                            ]],
 				[[ * c++ regex                         ]],
 				[[ * c++ performance analysis          ]],
 			},
 			{
 				[[ * symmetry: 对称 ]],
 				[[ *    math has a tendency to reward you when you respect its symmetry ]],
+				[[]],
 				[[ * trigonometry: 三角学 ]],
 				[[ *    One of the most important branches of mathematics is trigonometry ]],
+				[[]],
 				[[ * statistics: 统计学 ]],
+				[[]],
 				[[ * sail: 航行, sailor: 水手 ]],
+				[[]],
+				[[ * sake: (purpose)]],
+				[[ *    For the sake of simplicity]],
 			},
 		}
 
