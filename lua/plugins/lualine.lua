@@ -6,36 +6,45 @@ return {
     config = function()
         require("lualine").setup({
             options = {
-                section_separators = { left = '', right = '' },
-                component_separators = { left = '', right = '' },
+                icons_enabled = true,
+                section_separators = { left = "", right = "" },
+                component_separators = { left = "", right = "" },
                 theme = {
                     normal = {
                         a = {
-                            bg = "#5a6012",
-                            fg = "#ffffff"
+                            bg = "NONE",
+                            fg = "#9dde66",
                         },
                         b = { bg = "NONE" },
                         c = { bg = "NONE" },
+                        x = { fg = "#EDDB43"}
                     },
                     insert = {
-                        a = { bg = "#2b577a" },
+                        a = {
+                            bg = "NONE",
+                            fg = "#81C3D7",
+                        },
                         b = { bg = "NONE" },
                         c = { bg = "NONE" },
+                        x = { fg = "#EDDB43"}
                     },
                     visual = {
-                        a = { bg = "#795962" },
+                        a = {
+                            bg = "NONE",
+                            fg = "#bea6cd",
+                        },
                         b = { bg = "NONE" },
                         c = { bg = "NONE" },
+                        x = { fg = "#EDDB43"}
                     },
-                    replace = {
-                        a = { bg = "#2f5f63" },
+                    command = {
+                        a = {
+                            bg = "NONE",
+                            fg = "#F27649",
+                        },
                         b = { bg = "NONE" },
                         c = { bg = "NONE" },
-                    },
-                    command = { -- orange
-                        a = { bg = "#b33a22" },
-                        b = { bg = "NONE" },
-                        c = { bg = "NONE" },
+                        x = { fg = "#EDDB43"}
                     },
                     inactive = {
                         a = { bg = "NONE" },
@@ -43,6 +52,26 @@ return {
                         c = { bg = "NONE" },
                     },
                 },
+            },
+            sections = {
+                lualine_a = { "mode" },
+                lualine_b = { "diff" },
+                lualine_c = { "diagnostics" },
+                lualine_x = {
+                    {
+                        "filename",
+                        newfile_status = true,
+                        path = 3,
+                        symbols = {
+                            modified = '[+]',
+                            readonly = '[read_only]',
+                            unnamed = '[no_name]',
+                            newfile = '[new]'
+                        }
+                    },
+                },
+                lualine_y = { "" },
+                lualine_z = { "" },
             },
         })
     end,
