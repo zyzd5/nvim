@@ -1,5 +1,9 @@
 local keymap = vim.keymap.set
 
+-- replace j to gj
+keymap("n", "j", "gj", { noremap = true, silent = true })
+keymap("n", "k", "gk", { noremap = true, silent = true })
+
 -- Pagedown
 keymap("n", "<D-d>", "<C-d>", { noremap = true, silent = true })
 
