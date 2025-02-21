@@ -1,5 +1,9 @@
 local keymap = vim.keymap.set
 
+-- movement
+keymap("n", "j", "gj")
+keymap("n", 'k"', "gk")
+
 -- ignored keybind
 keymap("n", "q:", "")
 keymap("n", 'q"', "")
