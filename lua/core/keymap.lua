@@ -1,8 +1,8 @@
 local keymap = vim.keymap.set
 
 -- movement
-keymap("n", "j", "gj")
-keymap("n", 'k"', "gk")
+keymap("n", "j", "gj", { noremap = true, silent = true})
+keymap("n", "k", "gk", { noremap = true, silent = true})
 
 -- ignored keybind
 keymap("n", "q:", "")
