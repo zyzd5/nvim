@@ -1,5 +1,7 @@
 local keymap = vim.keymap.set
 
+keymap("n", "gG", "G", { noremap = true, silent = true })
+
 -- replace j to gj
 keymap("n", "j", "gj", { noremap = true, silent = true })
 keymap("n", "k", "gk", { noremap = true, silent = true })
