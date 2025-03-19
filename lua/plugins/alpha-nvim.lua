@@ -12,7 +12,6 @@ return {
 				[[ TODO:                               ]],
 				[[ * calculus 1800                     ]],
 				[[ * ncurses tetris                    ]],
-				[[ * 高精度                            ]],
 				[[ * manim | 链式法则, vim :s/a/b/g    ]],
 				[[ * 高精度                            ]],
 				[[ * 可微                              ]],
@@ -20,22 +19,7 @@ return {
 				[[ * c++ regex                         ]],
 				[[ * c++ performance analysis          ]],
 			}, {
-                [[ * screw ]],
-                [[ * spool ]],
-                [[ * shelf ]],
                 [[ * funeral ]],
-                [[ * sorrow ]],
-                [[ * estimate ]],
-                [[ * towel ]],
-                [[ * moisture ]],
-                [[ * court ]],
-                [[ * consult]],
-                [[ * thrilling]],
-                [[ * sore]],
-                [[ * spine]],
-                [[ * exaggerated]],
-                [[ * vendor]],
-                [[ * notation]],
             }
 		}
 

@@ -13,7 +13,7 @@ return {
                     normal = {
                         a = {
                             bg = "NONE",
-                            fg = "#9dde66",
+                            fg = "#b3e1a7",
                         },
                         b = { bg = "NONE" },
                         c = { bg = "NONE" },
@@ -22,7 +22,7 @@ return {
                     insert = {
                         a = {
                             bg = "NONE",
-                            fg = "#81C3D7",
+                            fg = "#9cdae9",
                         },
                         b = { bg = "NONE" },
                         c = { bg = "NONE" },
@@ -31,7 +31,7 @@ return {
                     visual = {
                         a = {
                             bg = "NONE",
-                            fg = "#bea6cd",
+                            fg = "#b6bef9",
                         },
                         b = { bg = "NONE" },
                         c = { bg = "NONE" },

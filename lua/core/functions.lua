@@ -86,6 +86,7 @@ local function ghostty_opacity(opt)
 	file:close()
 	vim.cmd(":silent !osascript ~/.config/nvim/lua/core/ghostty_opacity.scpt")
 end
+
 vim.api.nvim_create_user_command("Opacity", function(opts)
 	if os.getenv("ALACRITTY_WINDOW_ID") then
 		alacritty_opacity(opts)
@@ -98,50 +99,22 @@ end, {
 		return { "0.8", "1.0" }
 	end,
 })
+
 vim.api.nvim_create_user_command("Code", function()
 	vim.cmd("!code %")
 end, {})
-vim.api.nvim_create_user_command("CompileAndRun", function()
-	local filetype = vim.bo.filetype
 
-	if filetype == "c" then
-		vim.cmd("w")
-		vim.cmd("split")
-		vim.cmd("wincmd j")
-		vim.cmd("resize 6")
-		vim.cmd("term gcc % && ./a.out")
-	elseif filetype == "cpp" then
-		vim.cmd("w")
-		vim.cmd("split")
-		vim.cmd("wincmd j")
-		vim.cmd("resize 6")
-		vim.cmd("term g++ --std=c++17 % && ./a.out")
-	elseif filetype == "lua" then
-		vim.cmd("w")
-		vim.cmd("split")
-		vim.cmd("wincmd j")
-		vim.cmd("resize 6")
-		vim.cmd("term luajit %")
-	elseif filetype == "python" then
-		vim.cmd("w")
-		vim.cmd("split")
-		vim.cmd("wincmd j")
-		vim.cmd("resize 6")
-		vim.cmd("term python3 %")
-	else
-		print("unsupported type, go to add it")
-	end
-end, {})
 vim.api.nvim_create_user_command("Light", function()
 	vim.cmd("set background=light")
 	vim.cmd("colo gruvbox")
 	vim.cmd("let g:gruvbox_material_transparent_background = 0")
 end, {})
+
 vim.api.nvim_create_user_command("Dark", function()
 	vim.cmd("set background=dark")
 	vim.cmd("let g:gruvbox_material_transparent_background = 2")
 	vim.cmd("colo gruvbox-material")
 end, {})
+
 -- keybinding
-vim.keymap.set("n", "<F6>", ":CompileAndRun<CR>", {})
 vim.keymap.set("n", "r", ":CompileAndRun<CR>", {})
