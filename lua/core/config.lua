@@ -4,6 +4,7 @@ local global = vim.g
 
 option.whichwrap = "b,h,l,<,>"
 option.showmode = false
+option.laststatus = 0
 option.backspace = { "indent", "eol", "start" }
 option.scrolloff = 4
 option.tabstop = 4
