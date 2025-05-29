@@ -1,3 +1,4 @@
+vim.deprecate = function() end
 require("core.config")
 require("core.lazy")
 require("core.CompileAndRun")
