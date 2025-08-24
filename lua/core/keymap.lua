@@ -36,9 +36,9 @@ keymap("i", "<D-BS>", "<C-w>", { noremap = true, silent = true })
 
 -- fold toggle
 keymap("n", "<leader>[", "zc", { silent = true })
-keymap("v", "<leader>f[", "zC", { silent = true })
+keymap("v", "<leader>[", "zC", { silent = true })
 keymap("n", "<leader>]", "zo", { silent = true })
-keymap("v", "<leader>f]", "zO", { silent = true })
+keymap("v", "<leader>]", "zO", { silent = true })
 
 -- <leader>w close current buffer
 keymap("n", "<leader>w", "<cmd>bd<CR>", { silent = true })
