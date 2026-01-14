@@ -1,5 +1,8 @@
 local keymap = vim.keymap.set
 
+keymap("n", "<leader>gf", vim.lsp.buf.format, {})
+keymap("v", "<leader>gf", vim.lsp.buf.format, {})
+
 keymap("n", "<F1>", "", { noremap = true, silent = true })
 
 keymap("n", "gG", "G", { noremap = true, silent = true })
