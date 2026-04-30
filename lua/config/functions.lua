@@ -1,0 +1,172 @@
+local function preview_markdown()
+    vim.cmd("MarkdownPreviewToggle")
+end
+
+local function run_c_plus_plus()
+	vim.cmd("w")
+	vim.cmd("split")
+	vim.cmd("wincmd j")
+	vim.cmd("resize 6")
+	vim.cmd("term g++ --std=c++17 % && ./a.out")
+end
+
+local function run_c()
+	vim.cmd("w")
+	vim.cmd("split")
+	vim.cmd("wincmd j")
+	vim.cmd("resize 6")
+	vim.cmd("term gcc % && ./a.out")
+end
+
+local function run_lua()
+	vim.cmd("w")
+	vim.cmd("split")
+	vim.cmd("wincmd j")
+	vim.cmd("resize 6")
+	vim.cmd("term luajit %")
+end
+local function run_python()
+	vim.cmd("w")
+	vim.cmd("split")
+	vim.cmd("wincmd j")
+	vim.cmd("resize 6")
+	vim.cmd("term python3 %")
+end
+
+vim.api.nvim_create_user_command("CompileAndRun", function()
+	local filetype = vim.bo.filetype
+
+	if filetype == "c" then
+		run_c()
+	elseif filetype == "cpp" then
+		run_c_plus_plus()
+	elseif filetype == "lua" then
+		run_lua()
+	elseif filetype == "python" then
+		run_python()
+	elseif filetype == "markdown" then
+		preview_markdown()
+	else
+		print("unsupported type, go to add it")
+	end
+end, {})
+ vim.api.nvim_create_user_command("Blur", function(opts)
+	if os.getenv("GHOSTTY_BIN_DIR") then
+		local file = io.open("/Users/zyzds/Library/Application Support/com.mitchellh.ghostty/config", "r+")
+
+		if not file then
+			print("open file failed")
+			return
+		end
+
+		local blur = tostring(opts.args)
+		local offset = 0
+		while true do
+			local line = file:read("*l")
+			if not line then
+				break
+			end
+			local match_start, match_end = line:find(".*radius = .*")
+			if match_start then
+				file:seek("set", offset + match_start - 1)
+				file:write("background-blur-radius = " .. blur)
+				break
+			end
+			offset = offset + #line + 1
+		end
+		file:close()
+		vim.cmd(":silent !osascript ~/.config/nvim/lua/core/ghostty_opacity.scpt")
+	else
+		print("run this command when using ghostty")
+	end
+end, {
+	nargs = 1,
+	complete = function()
+		return { "0", "10", "30" }
+	end,
+})
+local function alacritty_opacity(opt)
+	local file = io.open("/Users/zyzds/.config/alacritty/alacritty.toml", "r+")
+	if not file then
+		print("open file failed")
+		return
+	end
+
+	local offset = 0
+	while true do
+		local line = file:read("*l")
+		if not line then
+			break
+		end
+		local match_start, match_end = line:find("opacity = .*")
+		if match_start then
+			file:seek("set", offset + match_start - 1)
+			file:write("opacity = " .. tostring(opt.args))
+			break
+		end
+		offset = offset + #line + 1
+	end
+	file:close()
+end
+local function ghostty_opacity(opt)
+	local file = io.open("/Users/zyzds/Library/Application Support/com.mitchellh.ghostty/config", "r+")
+
+	if not file then
+		print("open file failed")
+		return
+	end
+
+	local opacity = tostring(opt.args)
+	if opt.args == "1" then
+		opacity = "1.0"
+	end
+
+	local offset = 0
+	while true do
+		local line = file:read("*l")
+		if not line then
+			break
+		end
+		local match_start, match_end = line:find(".*opacity = .*")
+		if match_start then
+			file:seek("set", offset + match_start - 1)
+			file:write("background-opacity = " .. opacity)
+			break
+		end
+		offset = offset + #line + 1
+	end
+	file:close()
+	vim.cmd(":silent !osascript ~/.config/nvim/lua/config/ghostty_opacity.scpt")
+end
+
+vim.api.nvim_create_user_command("Opacity", function(opts)
+	if os.getenv("ALACRITTY_WINDOW_ID") then
+		alacritty_opacity(opts)
+	elseif os.getenv("GHOSTTY_BIN_DIR") then
+		ghostty_opacity(opts)
+	end
+end, {
+	nargs = 1,
+	complete = function()
+		return { "0.8", "1.0" }
+	end,
+})
+
+vim.api.nvim_create_user_command("Code", function()
+	vim.cmd("!code %")
+end, {})
+
+vim.api.nvim_create_user_command("Light", function()
+	vim.cmd("set background=light")
+	vim.cmd("colo gruvbox")
+	vim.cmd("let g:gruvbox_material_transparent_background = 0")
+end, {})
+
+vim.api.nvim_create_user_command("Dark", function()
+	vim.cmd("set background=dark")
+	vim.cmd("let g:gruvbox_material_transparent_background = 2")
+	vim.cmd("colo gruvbox-material")
+end, {})
+
+-- keybinding
+vim.keymap.set("n", "r", ":CompileAndRun<CR>", {})
