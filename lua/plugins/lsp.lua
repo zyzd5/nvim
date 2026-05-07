@@ -18,6 +18,7 @@ return {
                 }
             }
         }
-        vim.lsp.enable('lua_ls')
+        vim.lsp.config['kotlin-lsp'] = {}
+        vim.lsp.config['marksman'] = {}
     end
 }
